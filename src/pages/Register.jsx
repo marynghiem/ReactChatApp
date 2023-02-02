@@ -1,5 +1,5 @@
 import React from "react";
-import PersonAddAlt1Icon from "@mui/icons-material/PersonAddAlt1";
+import Add from "../images/addAvatar.png";
 
 const Register = () => {
   return (
@@ -12,7 +12,10 @@ const Register = () => {
           <input type="email" placeholder="Email" />
           <input type="password" placeholder="Password" />
           <input style={{ display: "none" }} type="file" id="file" />
-          <label htmlFor="file"></label>
+          <label htmlFor="file">
+            <img src={Add} alt="" />
+            <span>Add an avatar</span>
+          </label>
           <button>Sign Up</button>
         </form>
         <p>Already have an account? Login</p>
