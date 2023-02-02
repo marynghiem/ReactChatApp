@@ -1,4 +1,5 @@
 import React from "react";
+import PersonAddAlt1Icon from "@mui/icons-material/PersonAddAlt1";
 
 const Register = () => {
   return (
@@ -11,9 +12,7 @@ const Register = () => {
           <input type="email" placeholder="Email" />
           <input type="password" placeholder="Password" />
           <input style={{ display: "none" }} type="file" id="file" />
-          <label htmlFor="file">
-            <img src="" alt="" />
-          </label>
+          <label htmlFor="file"></label>
           <button>Sign Up</button>
         </form>
         <p>Already have an account? Login</p>
