@@ -7,12 +7,13 @@ const Register = () => {
         <span className="logo">Mary's Chat</span>
         <span className="title">Register</span>
         <form>
-          <input type="text" placeholder="display name" />
-          <input type="email" placeholder="email" />
-          <input type="password" placeholder="password" />
+          <input type="text" placeholder="Display Name" />
+          <input type="email" placeholder="Email" />
+          <input type="password" placeholder="Password" />
           <input type="file" />
           <button>Sign Up</button>
         </form>
+        <p>Already have an account? Login</p>
       </div>
     </div>
   );
