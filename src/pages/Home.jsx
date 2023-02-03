@@ -1,9 +1,14 @@
+import { Chat } from "@mui/icons-material";
 import React from "react";
+import Sidebar from "../components/Sidebar";
 
 const Home = () => {
   return (
     <div className="home">
-      <div className="container"></div>
+      <div className="container">
+        <Sidebar />
+        <Chat />
+      </div>
     </div>
   );
 };
