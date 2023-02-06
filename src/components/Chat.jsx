@@ -1,4 +1,8 @@
 import React from "react";
+import Cam from "../images/cam.png";
+import Add from "../images/add.png";
+import More from "../images/more.png";
+import Messages from "./Messages";
 
 const Chat = () => {
   return (
@@ -6,9 +10,12 @@ const Chat = () => {
       <div className="chatInfo">
         <span>Mary</span>
         <div className="chatIcon">
-          <img />
+          <img src={Cam} alt="" />
+          <img src={Add} alt="" />
+          <img src={More} alt="" />
         </div>
       </div>
+      <Messages />
     </div>
   );
 };

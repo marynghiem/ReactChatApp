@@ -1,5 +1,5 @@
-import { Chat } from "@mui/icons-material";
 import React from "react";
+import Chat from "../components/Chat";
 import Sidebar from "../components/Sidebar";
 
 const Home = () => {
