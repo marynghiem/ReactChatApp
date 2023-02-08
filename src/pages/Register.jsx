@@ -12,6 +12,7 @@ const Register = () => {
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
+    setLoading(true);
     e.preventDefault();
     const displayName = e.target[0].value;
     const email = e.target[1].value;
@@ -54,6 +55,7 @@ const Register = () => {
       });
     } catch (err) {
       setErr(true);
+      setLoading(false);
     }
   };
 
