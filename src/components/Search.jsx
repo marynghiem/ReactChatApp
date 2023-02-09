@@ -35,12 +35,15 @@ const Search = () => {
           onChange={(e) => setUsername(e.target.value)}
         />
       </div>
-      <div className="userChat">
-        <img src={user.photoURL} alt="" />
-        <div className="userChatInfo">
-          <span>{user.displayName}</span>
+      {err && <span>User not found!</span>}
+      {user && (
+        <div className="userChat" onClick={handleSelect}>
+          <img src={user.photoURL} alt="" />
+          <div className="userChatInfo">
+            <span>{user.displayName}</span>
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };
