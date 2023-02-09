@@ -8,7 +8,18 @@ const Search = () => {
   const [user, setUser] = useState(null);
   const [err, setErr] = useState(false);
 
-  const handleSearch = () => {};
+  const handleSearch = async () => {
+    const q = query(collection(db, "users"), where("displayName", "==", username));
+
+    try {
+      const querySnapshot = await getDocs(q);
+      querySnapshot.forEach((doc) => {
+        setUser(doc.data());
+      });
+    } catch (err) {
+      setErr(true);
+    }
+  };
 
   const handleKey = (e) => {
     e.code === "Enter" && handleSearch();
@@ -25,12 +36,9 @@ const Search = () => {
         />
       </div>
       <div className="userChat">
-        <img
-          src="https://media.licdn.com/dms/image/D5635AQFOcceVKb3VZg/profile-framedphoto-shrink_400_400/0/1675297581656?e=1676070000&v=beta&t=gWh3-8326aoU4UGL3O0mRBcVO3y8NnnQWQAGTORVL6o"
-          alt=""
-        />
+        <img src={user.photoURL} alt="" />
         <div className="userChatInfo">
-          <span>Mary Nghiem</span>
+          <span>{user.displayName}</span>
         </div>
       </div>
     </div>
